@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Portfolio Gallery Screen</title>
+  <desc id="desc">Grid-based gallery layout with project thumbnails and captions.</desc>
+  <rect width="1400" height="900" fill="#eef2ff"/>
+  <rect x="110" y="90" width="1180" height="720" rx="24" fill="#ffffff"/>
+  <rect x="170" y="150" width="340" height="18" rx="9" fill="#1e293b"/>
+  <rect x="170" y="195" width="520" height="12" rx="6" fill="#64748b"/>
+  <rect x="170" y="250" width="320" height="220" rx="14" fill="#93c5fd"/>
+  <rect x="520" y="250" width="320" height="220" rx="14" fill="#60a5fa"/>
+  <rect x="870" y="250" width="320" height="220" rx="14" fill="#3b82f6"/>
+  <rect x="170" y="500" width="320" height="220" rx="14" fill="#bfdbfe"/>
+  <rect x="520" y="500" width="320" height="220" rx="14" fill="#dbeafe"/>
+  <rect x="870" y="500" width="320" height="220" rx="14" fill="#e0e7ff"/>
+</svg>

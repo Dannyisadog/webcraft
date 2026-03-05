@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Landing Conversion Screen</title>
+  <desc id="desc">Lead capture and social proof section for a product launch campaign.</desc>
+  <rect width="1400" height="900" fill="#ecfeff"/>
+  <rect x="120" y="90" width="1160" height="720" rx="24" fill="#ffffff"/>
+  <rect x="170" y="140" width="360" height="18" rx="9" fill="#0f172a"/>
+  <rect x="170" y="190" width="460" height="12" rx="6" fill="#334155"/>
+  <rect x="170" y="250" width="640" height="460" rx="18" fill="#0f172a"/>
+  <rect x="840" y="250" width="390" height="260" rx="16" fill="#a5f3fc"/>
+  <rect x="840" y="530" width="390" height="180" rx="16" fill="#67e8f9"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Corporate Website Preview</title>
+  <desc id="desc">Modern corporate website layout with dashboard style blocks.</desc>
+  <rect width="1400" height="900" fill="#e5eefc"/>
+  <rect x="90" y="70" width="1220" height="760" rx="28" fill="#ffffff"/>
+  <rect x="140" y="120" width="320" height="18" rx="9" fill="#1f2937"/>
+  <rect x="140" y="160" width="540" height="12" rx="6" fill="#64748b"/>
+  <rect x="140" y="230" width="520" height="220" rx="18" fill="#111827"/>
+  <rect x="690" y="230" width="570" height="100" rx="14" fill="#3b82f6"/>
+  <rect x="690" y="350" width="270" height="210" rx="14" fill="#dbeafe"/>
+  <rect x="990" y="350" width="270" height="210" rx="14" fill="#bfdbfe"/>
+  <rect x="140" y="500" width="1120" height="280" rx="16" fill="#f8fafc"/>
+</svg>

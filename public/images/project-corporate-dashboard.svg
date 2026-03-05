@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Corporate Dashboard Screen</title>
+  <desc id="desc">Analytics styled dashboard interface used in corporate project screenshots.</desc>
+  <rect width="1400" height="900" fill="#f1f5f9"/>
+  <rect x="120" y="100" width="1160" height="700" rx="24" fill="#ffffff"/>
+  <rect x="170" y="150" width="250" height="18" rx="9" fill="#0f172a"/>
+  <rect x="170" y="195" width="420" height="12" rx="6" fill="#64748b"/>
+  <rect x="170" y="250" width="320" height="180" rx="14" fill="#dbeafe"/>
+  <rect x="520" y="250" width="320" height="180" rx="14" fill="#bfdbfe"/>
+  <rect x="870" y="250" width="360" height="180" rx="14" fill="#93c5fd"/>
+  <rect x="170" y="460" width="1060" height="290" rx="18" fill="#0f172a"/>
+  <polyline points="230,670 350,620 460,650 570,560 680,590 790,510 900,545 1010,470 1150,520" fill="none" stroke="#60a5fa" stroke-width="8" stroke-linecap="round"/>
+</svg>

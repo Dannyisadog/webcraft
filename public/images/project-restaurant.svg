@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Restaurant Website Preview</title>
+  <desc id="desc">Elegant restaurant homepage mockup with hero image and reservation panel.</desc>
+  <rect width="1400" height="900" fill="#fff7ed"/>
+  <rect x="100" y="80" width="1200" height="740" rx="28" fill="#ffffff"/>
+  <rect x="150" y="130" width="380" height="18" rx="9" fill="#7c2d12"/>
+  <rect x="150" y="170" width="520" height="12" rx="6" fill="#9a3412"/>
+  <rect x="150" y="220" width="720" height="300" rx="18" fill="#fdba74"/>
+  <rect x="900" y="220" width="350" height="300" rx="18" fill="#7c2d12"/>
+  <rect x="150" y="560" width="1100" height="210" rx="16" fill="#ffedd5"/>
+  <circle cx="1080" cy="370" r="80" fill="#fed7aa"/>
+</svg>

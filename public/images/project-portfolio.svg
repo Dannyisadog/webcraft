@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Portfolio Website Preview</title>
+  <desc id="desc">Minimal portfolio layout with bold typographic composition.</desc>
+  <rect width="1400" height="900" fill="#f8fafc"/>
+  <rect x="100" y="80" width="1200" height="740" rx="28" fill="#ffffff"/>
+  <rect x="160" y="150" width="520" height="20" rx="10" fill="#0f172a"/>
+  <rect x="160" y="200" width="620" height="12" rx="6" fill="#475569"/>
+  <rect x="160" y="260" width="500" height="470" rx="18" fill="#111827"/>
+  <rect x="700" y="260" width="540" height="220" rx="18" fill="#3b82f6"/>
+  <rect x="700" y="510" width="260" height="220" rx="18" fill="#dbeafe"/>
+  <rect x="980" y="510" width="260" height="220" rx="18" fill="#bfdbfe"/>
+</svg>

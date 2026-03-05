@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Web Crafting Hero Background</title>
+  <desc id="desc">Modern abstract workspace inspired gradient background for studio hero section.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="55%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <circle cx="1530" cy="220" r="260" fill="#60a5fa" fill-opacity="0.16"/>
+  <circle cx="360" cy="920" r="320" fill="#93c5fd" fill-opacity="0.12"/>
+  <rect x="300" y="230" width="1320" height="620" rx="32" fill="#ffffff" fill-opacity="0.08"/>
+  <rect x="380" y="310" width="760" height="14" rx="7" fill="#ffffff" fill-opacity="0.4"/>
+  <rect x="380" y="360" width="620" height="12" rx="6" fill="#ffffff" fill-opacity="0.26"/>
+  <rect x="380" y="408" width="560" height="12" rx="6" fill="#ffffff" fill-opacity="0.22"/>
+  <rect x="1180" y="310" width="360" height="460" rx="20" fill="#111827" fill-opacity="0.45"/>
+</svg>

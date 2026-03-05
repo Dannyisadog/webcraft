@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Restaurant Menu Screen</title>
+  <desc id="desc">Menu-focused page with categorized dishes and highlight cards.</desc>
+  <rect width="1400" height="900" fill="#fff1e6"/>
+  <rect x="120" y="90" width="1160" height="720" rx="24" fill="#ffffff"/>
+  <rect x="170" y="140" width="260" height="18" rx="9" fill="#9a3412"/>
+  <rect x="170" y="190" width="380" height="12" rx="6" fill="#c2410c"/>
+  <rect x="170" y="250" width="480" height="120" rx="14" fill="#ffedd5"/>
+  <rect x="170" y="390" width="480" height="120" rx="14" fill="#fed7aa"/>
+  <rect x="170" y="530" width="480" height="120" rx="14" fill="#fdba74"/>
+  <rect x="700" y="250" width="530" height="400" rx="18" fill="#7c2d12"/>
+</svg>
