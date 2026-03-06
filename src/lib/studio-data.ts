@@ -196,6 +196,37 @@ export const projects: Project[] = [
       "/images/project-event-schedule.svg",
     ],
   },
+  {
+    slug: "la-tavola-italiana",
+    name: {
+      en: "La Tavola Italiana Restaurant",
+      zh: "La Tavola Italiana 義大利餐廳",
+    },
+    industry: { en: "Hospitality", zh: "餐旅業" },
+    category: "Restaurant",
+    description: {
+      en: "An authentic Italian dining experience website featuring menu showcase, online reservations, and bilingual support for Taipei location.",
+      zh: "正統義大利餐廳官網，展示完整菜單、線上訂位，並支援繁體中文與英文雙語。",
+    },
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Font Awesome"],
+    liveDemo: "https://webcraft-italian-restaurant.vercel.app/",
+    image: "/images/site5.png",
+    problemSolved: {
+      en: "The restaurant needed a modern web presence to showcase authentic Italian cuisine and handle online reservations effectively.",
+      zh: "餐廳需要現代化的網站來展示正統義大利料理，並有效處理線上訂位。",
+    },
+    keyFeatures: [
+      { en: "Bilingual support (Chinese/English)", zh: "雙語支援（中文/英文）" },
+      { en: "Online reservation system", zh: "線上訂位系統" },
+      { en: "Menu categories with images", zh: "分類菜單與圖片" },
+      { en: "Responsive design", zh: "響應式設計" },
+      { en: "Smooth animations", zh: "流暢動畫效果" },
+    ],
+    screenshots: [
+      "/images/project-italian-restaurant.svg",
+    ],
+    featured: true,
+  },
 ];
 
 export const services: Service[] = [
