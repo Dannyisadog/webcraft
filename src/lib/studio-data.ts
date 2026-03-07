@@ -80,6 +80,130 @@ export const projectCategoryLabels: Record<ProjectCategory, LocalizedText> = {
 
 export const projects: Project[] = [
   {
+    slug: "aurelia-fine-dining",
+    name: {
+      en: "Aurelia Fine Dining",
+      zh: "Aurelia 高級餐廳",
+    },
+    industry: { en: "Hospitality", zh: "餐旅業" },
+    category: "Restaurant",
+    description: {
+      en: "A luxurious fine dining restaurant website with a mysterious and elegant atmosphere. Features cinematic design, editorial layouts, and immersive storytelling.",
+      zh: "神秘優雅的高級餐廳網站。電影感設計、編輯式佈局與沉浸式敘事體驗。",
+    },
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Ant Design", "Font Awesome"],
+    liveDemo: "https://webcraft-fine-dining.vercel.app/",
+    image: "/images/site-aurelia.png",
+    problemSolved: {
+      en: "Created an immersive, editorial-style website that captures the essence of Michelin-star dining experience.",
+      zh: "打造沉浸式編輯風格網站，呈現米其林星級餐飲體驗的核心價值。",
+    },
+    keyFeatures: [
+      { en: "Cinematic fullscreen sections", zh: "電影感全螢幕章節" },
+      { en: "Editorial layout with elegant typography", zh: "優雅襯線字體編輯佈局" },
+      { en: "Floating side navigation", zh: "浮動側邊導航" },
+      { en: "Reservation form with date/time selection", zh: "含日期時間選擇的預訂表單" },
+      { en: "Mobile-responsive with full-width display", zh: "響應式全寬顯示" },
+    ],
+    screenshots: [
+      "/images/site-aurelia.png",
+    ],
+    featured: true,
+  },
+  {
+    slug: "iron-forge-gym",
+    name: {
+      en: "Iron Forge Gym",
+      zh: "Iron Forge 健身房",
+    },
+    industry: { en: "Fitness", zh: "健身運動" },
+    category: "Corporate",
+    description: {
+      en: "A bold, athletic gym website with strong black and yellow design. Features programs, coaches, membership plans, and facilities showcase.",
+      zh: "以黑黃配色打造的力量感健身房網站。展示課程、教練、會員方案與設施。",
+    },
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Ant Design", "Font Awesome"],
+    liveDemo: "https://webcraft-fitness.vercel.app/",
+    image: "/images/site-ironforge.png",
+    problemSolved: {
+      en: "Built a powerful, masculine website that communicates strength and professionalism for a serious training facility.",
+      zh: "打造充滿力量感的網站，傳達專業訓練中心的強度與專業。",
+    },
+    keyFeatures: [
+      { en: "Bold black/yellow color scheme", zh: "大膽的黑黃配色" },
+      { en: "Sharp edges - no rounded corners", zh: "尖銳邊緣無圓角" },
+      { en: "Uppercase bold typography", zh: "大寫粗體字型" },
+      { en: "Programs and coaches sections", zh: "課程與教練區塊" },
+      { en: "Membership pricing tables", zh: "會員價格表" },
+    ],
+    screenshots: [
+      "/images/site-ironforge.png",
+    ],
+    featured: true,
+  },
+  {
+    slug: "velocity-athletics",
+    name: {
+      en: "Velocity Athletics",
+      zh: "Velocity 運動品牌",
+    },
+    industry: { en: "Sportswear", zh: "運動服飾" },
+    category: "Corporate",
+    description: {
+      en: "A modern sports branding website for premium athletic wear. Features purple gradient design, athlete endorsements, and product collections.",
+      zh: "現代運動品牌網站，展示高端運動服飾。紫色漸變設計、運動員代言與商品系列。",
+    },
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Font Awesome"],
+    liveDemo: "https://webcraft-sport-branding.vercel.app/",
+    image: "/images/site-velocity.png",
+    problemSolved: {
+      en: "Created a bold, athletic design that stands out from typical corporate websites with energetic purple gradients.",
+      zh: "以活力紫色漸變打造出與眾不同的運動風格網站。",
+    },
+    keyFeatures: [
+      { en: "Deep purple color palette", zh: "深紫色調配色" },
+      { en: "Gradient accents and glow effects", zh: "漸變與發光效果" },
+      { en: "Athlete cards and testimonials", zh: "運動員卡片與見證" },
+      { en: "Product collection showcase", zh: "商品系列展示" },
+      { en: "Community subscription section", zh: "社團訂閱區塊" },
+    ],
+    screenshots: [
+      "/images/site-velocity.png",
+    ],
+    featured: true,
+  },
+  {
+    slug: "soundwave-studio",
+    name: {
+      en: "SoundWave Recording Studio",
+      zh: "SoundWave 錄音室",
+    },
+    industry: { en: "Music Production", zh: "音樂製作" },
+    category: "Restaurant",
+    description: {
+      en: "A creative, light-themed recording studio website with coral/sage/orange colors. Features services, booking system, and studio gallery.",
+      zh: "創意感十足的淺色調錄音室網站，採用珊瑚綠/橙色配色。含服務項目、預訂系統與工作室展示。",
+    },
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Font Awesome"],
+    liveDemo: "https://webcraft-recording-studio.vercel.app/",
+    image: "/images/site-soundwave.png",
+    problemSolved: {
+      en: "Built a fun, creative website that feels like a music studio rather than a corporate business site.",
+      zh: "打造有趣、創意的網站，讓音樂工作室的氛圍更加鮮明。",
+    },
+    keyFeatures: [
+      { en: "Light cream background with coral accents", zh: "淺米色背景配珊瑚色點綴" },
+      { en: "Service cards with hover animations", zh: "懸浮動畫的服務卡片" },
+      { en: "Booking system with date/time selection", zh: "日期時間選擇的預訂系統" },
+      { en: "Equipment showcase", zh: "設備展示" },
+      { en: "Bilingual support (EN/ZH)", zh: "中英文雙語支援" },
+    ],
+    screenshots: [
+      "/images/site-soundwave.png",
+    ],
+    featured: true,
+  },
+  {
     slug: "northbridge-corporate-site",
     name: {
       en: "Northbridge Corporate Website",
@@ -195,6 +319,7 @@ export const projects: Project[] = [
       "/images/project-event.svg",
       "/images/project-event-schedule.svg",
     ],
+    featured: true,
   },
   {
     slug: "la-tavola-italiana",
@@ -224,6 +349,37 @@ export const projects: Project[] = [
     ],
     screenshots: [
       "/images/project-italian-restaurant.svg",
+    ],
+    featured: true,
+  },
+  {
+    slug: "green-garden-vege-restaurant",
+    name: {
+      en: "Green Garden Vegan Restaurant",
+      zh: "Green Garden 素食餐廳",
+    },
+    industry: { en: "Hospitality", zh: "餐旅業" },
+    category: "Restaurant",
+    description: {
+      en: "A modern plant-based restaurant website with earth tone design. Features seasonal menu, elegant dining experience, and reservation system.",
+      zh: "以大地色系設計的現代素食餐廳網站。展示季節菜單、優雅用餐體驗與訂位系統。",
+    },
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Font Awesome"],
+    liveDemo: "https://webcraft-vege-restaurant.vercel.app/",
+    image: "/images/site-vege.png",
+    problemSolved: {
+      en: "Created a unique, nature-inspired design that stands out from other restaurant websites while effectively showcasing plant-based cuisine.",
+      zh: "打造獨特的大自然風格設計，在展示素食料理的同時與其他餐廳網站做出區別。",
+    },
+    keyFeatures: [
+      { en: "Earth tone color scheme (#2D5A27 green, #D4A373 accent)", zh: "大地色系配色（#2D5A27 綠色、#D4A373 強調色）" },
+      { en: "Distinctive typography (DM Sans + Fraunces)", zh: "獨特字型（DM Sans + Fraunces）" },
+      { en: "Asymmetric layout design", zh: "不對稱佈局設計" },
+      { en: "Online reservation system", zh: "線上訂位系統" },
+      { en: "Responsive design", zh: "響應式設計" },
+    ],
+    screenshots: [
+      "/images/project-vege.svg",
     ],
     featured: true,
   },
