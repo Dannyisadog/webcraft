@@ -371,7 +371,7 @@ export const projects: Project[] = [
       "Font Awesome",
     ],
     liveDemo: "https://webcraft-italian-restaurant.vercel.app/",
-    image: "/images/site5.png",
+    image: "/images/tavola.png",
     problemSolved: {
       en: "The restaurant needed a modern web presence to showcase authentic Italian cuisine and handle online reservations effectively.",
       zh: "餐廳需要現代化的網站來展示正統義大利料理，並有效處理線上訂位。",
