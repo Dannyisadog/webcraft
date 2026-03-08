@@ -1,102 +1,32 @@
-import type { Metadata } from "next";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import {
-  faLinkedin,
-  faGithub,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { SiteShell } from "@/components/SiteShell";
-import { AnimatedSection } from "@/components/AnimatedSection";
-import { ContactForm } from "@/components/ContactForm";
-import { T } from "@/components/T";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Start your project inquiry with Web Crafting. Send your website requirements, goals, and timeline.",
-};
+import { motion } from "framer-motion";
 
 export default function ContactPage() {
   return (
-    <SiteShell>
-      <AnimatedSection className="border-b border-zinc-800/80">
-        <div className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-semibold text-zinc-100">
-            <T en="Let's build your next website" zh="一起打造你的下一個網站" />
-          </h1>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-zinc-400 sm:text-base">
-            <T
-              en="Share your project goals and we'll help shape the right scope, timeline, and implementation plan."
-              zh="告訴我們你的目標，我們會協助釐清範圍、時程與實作方案。"
-            />
-          </p>
-        </div>
-      </AnimatedSection>
-
-      <AnimatedSection>
-        <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
-          <ContactForm />
-
-          <aside className="space-y-4 rounded-sm border border-zinc-800 bg-zinc-950/60 p-6 shadow-sm">
-            <h2 className="text-2xl font-semibold text-zinc-100">
-              <T en="Project inquiry info" zh="專案詢問資訊" />
-            </h2>
-            <p className="text-sm leading-relaxed text-zinc-400">
-              <T
-                en="We typically reply within one business day with next steps and a suggested call schedule."
-                zh="我們通常會在 1 個工作天內回覆，並提供下一步與會議建議。"
-              />
-            </p>
-
-            <p className="inline-flex items-center gap-2 text-sm text-zinc-300">
-              <FontAwesomeIcon icon={faEnvelope} className="text-zinc-100" />
-              dannyisadog10@gmail.com
-            </p>
-            <p className="inline-flex items-center gap-2 text-sm text-zinc-300">
-              <FontAwesomeIcon icon={faLocationDot} className="text-zinc-100" />
-              <T
-                en="Remote Studio, Global Collaboration"
-                zh="遠端工作室，全球合作"
-              />
-            </p>
-
-            <div className="pt-3">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">
-                <T en="Social media" zh="社群媒體" />
-              </p>
-              <div className="flex flex-wrap gap-4 text-sm text-zinc-300">
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 transition-colors hover:text-zinc-100"
-                >
-                  <FontAwesomeIcon icon={faLinkedin} className="text-sm" />
-                  LinkedIn
-                </a>
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 transition-colors hover:text-zinc-100"
-                >
-                  <FontAwesomeIcon icon={faGithub} className="text-sm" />
-                  GitHub
-                </a>
-                <a
-                  href="https://x.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 transition-colors hover:text-zinc-100"
-                >
-                  <FontAwesomeIcon icon={faXTwitter} className="text-sm" />X
-                </a>
+    <div className="min-h-screen pt-32 pb-20">
+      <div className="container-portfolio">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <h1 className="font-display text-4xl font-bold mb-6">Get in Touch</h1>
+          <div className="glass-panel p-8 max-w-xl">
+            <form className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium mb-2">Name</label>
+                <input type="text" className="w-full px-4 py-3 rounded-lg bg-background border border-foreground/20 focus:border-indigo-500 focus:outline-none" placeholder="Your name" />
               </div>
-            </div>
-          </aside>
-        </div>
-      </AnimatedSection>
-    </SiteShell>
+              <div>
+                <label className="block text-sm font-medium mb-2">Email</label>
+                <input type="email" className="w-full px-4 py-3 rounded-lg bg-background border border-foreground/20 focus:border-indigo-500 focus:outline-none" placeholder="your@email.com" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2">Message</label>
+                <textarea rows={4} className="w-full px-4 py-3 rounded-lg bg-background border border-foreground/20 focus:border-indigo-500 focus:outline-none" placeholder="Tell me about your project..."></textarea>
+              </div>
+              <button type="submit" className="btn-primary w-full">Send Message</button>
+            </form>
+          </div>
+        </motion.div>
+      </div>
+    </div>
   );
 }

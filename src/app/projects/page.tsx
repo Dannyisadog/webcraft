@@ -1,43 +1,78 @@
-import type { Metadata } from "next";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
-import { SiteShell } from "@/components/SiteShell";
-import { ProjectGrid } from "@/components/ProjectGrid";
-import { AnimatedSection } from "@/components/AnimatedSection";
-import { T } from "@/components/T";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Projects",
-  description:
-    "Explore Web Crafting projects across corporate, restaurant, portfolio, event, and landing page industries.",
+import { motion } from "framer-motion";
+import { projects } from "@/lib/studio-data";
+import { useLanguage } from "@/context/LanguageContext";
+
+const projectImages: Record<string, string> = {
+  "aurelia-fine-dining": "/images/aurelia.png",
+  "iron-forge-gym": "/images/ironforge.png",
+  "velocity-athletics": "/images/velocity.png",
+  "soundwave-studio": "/images/soundwave.png",
+  "northbridge-corporate-site": "/images/site1.png",
+  "olive-and-oak-restaurant": "/images/site2.png",
+  "atelier-nova-designer-portfolio": "/images/site3.png",
+  "city-tech-summit-registration": "/images/site4.png",
+  "la-tavola-italiana": "/images/site5.png",
+  "green-garden-vege-restaurant": "/images/greenroots.png",
 };
 
 export default function ProjectsPage() {
-  return (
-    <SiteShell>
-      <AnimatedSection className="border-b border-zinc-800/80">
-        <div className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-          <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">
-            <FontAwesomeIcon icon={faFolderOpen} className="text-zinc-100" />
-            <T en="All projects" zh="全部作品" />
-          </p>
-          <h1 className="mt-3 text-4xl font-semibold text-zinc-100">
-            <T en="Project showcase" zh="作品展示" />
-          </h1>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-zinc-400 sm:text-base">
-            <T
-              en="A collection of websites built for different industries, each focused on performance, usability, and business impact."
-              zh="收錄跨產業網站案例，每個專案都聚焦於效能、易用性與商業成果。"
-            />
-          </p>
-        </div>
-      </AnimatedSection>
+  const { language } = useLanguage();
 
-      <AnimatedSection>
-        <div className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-          <ProjectGrid />
-        </div>
-      </AnimatedSection>
-    </SiteShell>
+  return (
+    <div className="min-h-screen pt-32 pb-20">
+      <div className="container-portfolio">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <h1 className="font-display text-4xl font-bold mb-2">
+            {language === "zh" ? "精選作品" : "Featured Work"}
+          </h1>
+          <p className="text-foreground/60 mb-12">
+            {language === "zh" 
+              ? "以下是過去完成的專案作品" 
+              : "Here are some of the projects I've completed"}
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <motion.a
+                key={project.slug}
+                href={project.liveDemo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card p-0 overflow-hidden group cursor-pointer block"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+              >
+                <div className="aspect-video overflow-hidden bg-muted">
+                  <img 
+                    src={projectImages[project.slug] || "/images/site1.png"} 
+                    alt={project.name[language]}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-display text-lg font-semibold mb-2 group-hover:text-indigo-500 transition-colors">
+                    {project.name[language]}
+                  </h3>
+                  <p className="text-sm text-foreground/60 mb-3 line-clamp-2">
+                    {project.description[language]}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.slice(0, 3).map((tech) => (
+                      <span key={tech} className="px-2 py-1 text-xs rounded-full bg-indigo-500/10 text-indigo-500">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </div>
   );
 }

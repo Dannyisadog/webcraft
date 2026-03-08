@@ -1,116 +1,116 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
-import { SiteShell } from "@/components/SiteShell";
-import { AnimatedSection } from "@/components/AnimatedSection";
-import { T } from "@/components/T";
-import { aboutHighlights, technologyStack } from "@/lib/studio-data";
+"use client";
 
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "Meet Danny, founder of Web Crafting, and learn the philosophy behind modern business-focused website development.",
-};
+import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
+
+const skills = [
+  { name: "React", level: 95 },
+  { name: "Next.js", level: 90 },
+  { name: "TypeScript", level: 85 },
+  { name: "Tailwind CSS", level: 90 },
+  { name: "Framer Motion", level: 85 },
+  { name: "Node.js", level: 80 },
+];
 
 export default function AboutPage() {
+  const { language } = useLanguage();
+
   return (
-    <SiteShell>
-      <AnimatedSection className="border-b border-zinc-800/80">
-        <div className="mx-auto grid w-full max-w-6xl gap-6 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <div>
-            <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">
-              <FontAwesomeIcon
-                icon={faUserAstronaut}
-                className="text-zinc-100"
-              />
-              <T en="Founder introduction" zh="創辦人介紹" />
-            </p>
-            <h1 className="mt-3 text-4xl font-semibold text-zinc-100">
-              <T en="Hi, I'm Danny." zh="你好，我是 Danny。" />
-            </h1>
-            <p className="mt-4 text-sm leading-relaxed text-zinc-400 sm:text-base">
-              <T
-                en="I founded Web Crafting to help businesses ship digital experiences that look modern and perform reliably. Every project is intentionally crafted around real goals, not just visual polish."
-                zh="我創立 Web Crafting，是為了幫助企業打造現代、穩定且能落地的數位體驗。每個專案都以實際商業目標為核心，而不只是好看。"
-              />
-            </p>
-          </div>
-          <div className="rounded-sm border border-zinc-800 bg-zinc-950/60 p-6 shadow-sm">
-            <div className="relative mb-5 h-64 overflow-hidden rounded-sm border border-zinc-800 bg-zinc-900/70 sm:h-72">
-              <Image
-                src="/images/founder.jpg"
-                alt="Founder Danny"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                priority
+    <div className="min-h-screen pt-32 pb-20">
+      <div className="container-portfolio">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Profile Image */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="relative"
+          >
+            <div className="aspect-[3/4] rounded-2xl overflow-hidden glass-panel p-2">
+              <img 
+                src="/images/founder.jpg" 
+                alt="Founder"
+                className="w-full h-full object-cover rounded-xl"
               />
             </div>
-            <h2 className="text-2xl font-semibold text-zinc-100">
-              <T en="Studio story" zh="工作室故事" />
-            </h2>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-              <T
-                en="Web Crafting started as a freelance frontend practice and evolved into a focused web development studio serving ambitious businesses across multiple industries."
-                zh="Web Crafting 起初是自由接案的前端工作，逐步發展為專注服務成長型企業的網站開發工作室。"
-              />
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-              <T
-                en="We combine strategic discovery, purposeful UI decisions, and production-grade implementation to create websites that are fast, scalable, and conversion-ready."
-                zh="我們結合策略探索、清楚的 UI 決策與可上線的工程實作，打造快速、可擴充且可轉換的網站。"
-              />
-            </p>
-          </div>
-        </div>
-      </AnimatedSection>
+            {/* Floating badge */}
+            <motion.div 
+              className="absolute -bottom-6 -right-6 glass-card p-4 hidden lg:block"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              <p className="text-3xl font-bold gradient-text">5+</p>
+              <p className="text-xs text-foreground/60">{language === "zh" ? "年經驗" : "Years Experience"}</p>
+            </motion.div>
+          </motion.div>
 
-      <AnimatedSection className="border-b border-zinc-800/80">
-        <div className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold text-zinc-100">
-            <T en="Development philosophy" zh="開發理念" />
-          </h2>
-          <div className="mt-6 grid gap-5 md:grid-cols-3">
-            {aboutHighlights.map((item) => (
-              <article
-                key={item.title.en}
-                className="rounded-sm border border-zinc-800 bg-zinc-950/60 p-5 shadow-sm"
-              >
-                <h3 className="inline-flex items-center gap-2 text-lg font-semibold text-zinc-100">
-                  <FontAwesomeIcon icon={item.icon} className="text-zinc-100" />
-                  <T en={item.title.en} zh={item.title.zh} />
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-                  <T en={item.description.en} zh={item.description.zh} />
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </AnimatedSection>
+          {/* Content */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="space-y-8"
+          >
+            <div>
+              <p className="text-indigo-500 text-sm uppercase tracking-widest mb-2">
+                {language === "zh" ? "關於我" : "About Me"}
+              </p>
+              <h1 className="font-display text-4xl font-bold mb-4">
+                {language === "zh" ? "網頁開發者" : "Web Developer"}
+              </h1>
+              <p className="text-foreground/70 leading-relaxed">
+                {language === "zh"
+                  ? "我是一位熱愛創造美好網頁體驗的開發者。從 2019 年開始投入網頁開發，專精於 React、Next.js 和現代前端技術。我相信好的網站不僅要美觀，更要能幫助企業達成商業目標。"
+                  : "I'm a developer passionate about creating beautiful web experiences. Since 2019, I've been working with React, Next.js, and modern frontend technologies. I believe great websites should not only look good but also help businesses achieve their goals."}
+              </p>
+              <p className="text-foreground/70 leading-relaxed mt-4">
+                {language === "zh"
+                  ? "我的使命是幫助企業打造現代化、高效能且具有設計感的網站，讓他們在數位世界中脫穎而出。"
+                  : "My mission is to help businesses create modern, performant, and beautifully designed websites that stand out in the digital world."}
+              </p>
+            </div>
 
-      <AnimatedSection>
-        <div className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold text-zinc-100">
-            <T en="Technology stack" zh="技術堆疊" />
-          </h2>
-          <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {technologyStack.map((technology) => (
-              <li
-                key={technology.name.en}
-                className="inline-flex items-center gap-2 rounded-sm border border-zinc-800 bg-zinc-950/60 px-4 py-3 text-sm font-medium text-zinc-300 shadow-sm"
-              >
-                <FontAwesomeIcon
-                  icon={technology.icon}
-                  className="text-zinc-100"
-                />
-                <T en={technology.name.en} zh={technology.name.zh} />
-              </li>
-            ))}
-          </ul>
+            {/* Skills */}
+            <div>
+              <h2 className="font-display text-xl font-semibold mb-4">
+                {language === "zh" ? "技術技能" : "Skills"}
+              </h2>
+              <div className="space-y-4">
+                {skills.map((skill) => (
+                  <div key={skill.name}>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">{skill.name}</span>
+                      <span className="text-sm text-foreground/60">{skill.level}%</span>
+                    </div>
+                    <div className="h-2 bg-muted rounded-full overflow-hidden">
+                      <motion.div 
+                        className="h-full bg-gradient-to-r from-indigo-500 to-cyan-500"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.1 }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4">
+              {[
+                { number: "50+", label: language === "zh" ? "專案" : "Projects" },
+                { number: "30+", label: language === "zh" ? "客戶" : "Clients" },
+                { number: "100%", label: language === "zh" ? "滿意度" : "Satisfaction" },
+              ].map((stat) => (
+                <div key={stat.label} className="glass-card p-4 text-center">
+                  <p className="font-display text-2xl font-bold gradient-text">{stat.number}</p>
+                  <p className="text-xs text-foreground/60">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
-      </AnimatedSection>
-    </SiteShell>
+      </div>
+    </div>
   );
 }
